@@ -1,0 +1,95 @@
+*{
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ border: 0;
+ outline: 0;
+ box-sizing: border-box;  
+}
+
+html, body{
+  height: 100%;
+}
+#root{
+  height: 100%;
+  display: flex;
+}
+
+.sidebar{
+  padding: 35px;
+  width: 350px;
+  border-right: 1px solid #9f9fa3a4;
+  height: 100%;
+}
+
+.logo{
+  margin-bottom: 35px;
+  font-size: 30px;
+}
+
+.description{
+  font-size: 14px;
+  color: #000;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+nav li {
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 14px;
+}
+
+nav li:hover{
+  color: #0099cc;
+  cursor: pointer;
+}
+
+.modalClose{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 22px;
+}
+
+.modalClose:hover{
+  cursor: pointer;
+}
+
+.modalHeader{
+  margin-bottom: 20px;
+}
+
+.modalBody p{
+  color: #607d8b;;
+}
+
+.content{
+  flex: 1;
+}
+
+.header{
+  height: 58px;
+  border-bottom: 1px solid rgb(185, 186, 187);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.header .search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.header .search input{
+  margin-left: 5px;
+}
+
+.header .search svg{
+  height: 25px;
+  width: 25px;
+  opacity: 0.7;
+}
