@@ -66,6 +66,8 @@ nav li:hover{
 
 .content{
   flex: 1;
+  overflow: auto;
+  background: #f8f6f6;
 }
 
 .header{
@@ -74,6 +76,9 @@ nav li:hover{
   padding: 0 30px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background: #fff;
 }
 
 .header .search {
@@ -92,4 +97,32 @@ nav li:hover{
   height: 25px;
   width: 25px;
   opacity: 0.7;
+}
+
+.content .brands{
+  padding: 20px;
+}
+
+.brand {
+  border: 1px solid #c7c7c7;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.brand h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.brand-colors{
+  display: flex;
+}
+
+.brand-colors span{
+  flex: 1;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
