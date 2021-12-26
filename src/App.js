@@ -14,10 +14,11 @@ function App() {
   })
 
   const [brands, setBrands] = useState(brandsArray);
-  const [selectedBrands, setSelectedBrands] = useState();
+  const [selectedBrands, setSelectedBrands] = useState([]);
 
   const data = {
-    brands
+    brands,
+    selectedBrands,setSelectedBrands
   }
 
   return (
