@@ -3,9 +3,10 @@ import { useState } from "react/cjs/react.development";
 import Brand from "./Brand";
 import MainContext from "../context/MainContext";
 import { useContext } from "react";
+import Copied from "./Copied";
 
 function Content() {    
-    const {brands} = useContext(MainContext);
+    const {brands, copiedBrand} = useContext(MainContext);
     return ( 
     <>
         <main className="content">
@@ -17,6 +18,7 @@ function Content() {
                 )}
             </section>
         </main>
+        {copiedBrand && <Copied/>}
     </>
 
      );

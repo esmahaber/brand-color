@@ -4,6 +4,7 @@ import Content from './components/Content';
 import MainContext from './context/MainContext';
 import Brands from "./brands.json";
 import { useState } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 function App() {
 
@@ -15,11 +16,21 @@ function App() {
 
   const [brands, setBrands] = useState(brandsArray);
   const [selectedBrands, setSelectedBrands] = useState([]);
+  const [copiedBrand, setCopiedBrand] = useState();
 
   const data = {
     brands,
-    selectedBrands,setSelectedBrands
+    selectedBrands,
+    setSelectedBrands,
+    copiedBrand,
+    setCopiedBrand
   }
+
+  useEffect(()=>{
+    setTimeout(() => {
+      setCopiedBrand("");
+    }, 5000);
+  },[copiedBrand])
 
   return (
     <>

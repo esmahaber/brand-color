@@ -122,6 +122,7 @@ nav li:hover{
  .brand.selected .brand-colors span{
   flex: 1;
   text-indent: 0;
+  cursor: pointer;
  }
 
 .brand-colors{
@@ -138,3 +139,52 @@ nav li:hover{
   white-space: nowrap;
   overflow: hidden;
 }
+
+.copied{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  min-width: 250px;
+  border: 1px solid none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+  @-webkit-keyframes shake {
+  0%, 100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+  -webkit-transform: translate3d(-10px, 0, 0);
+  transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+  -webkit-transform: translate3d(10px, 0, 0);
+  transform: translate3d(10px, 0, 0);
+  }
+  }
+  @keyframes shake {
+  0%, 100% {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+  -webkit-transform: translate3d(-10px, 0, 0);
+  transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+  -webkit-transform: translate3d(10px, 0, 0);
+  transform: translate3d(10px, 0, 0);
+  }
+  } 

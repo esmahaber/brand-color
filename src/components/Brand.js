@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import MainContext from '../context/MainContext';
 import {getContrastYIQ} from './helpers';
+import Clipboard from 'react-clipboard.js';
 
 function Brand({brand}) {
 
-    const {selectedBrands, setSelectedBrands} = useContext(MainContext);
+    const {selectedBrands, setSelectedBrands, setCopiedBrand} = useContext(MainContext);
 
     const toggleSelected = () => {
         if(selectedBrands.includes(brand.slug)){
@@ -19,7 +20,9 @@ function Brand({brand}) {
             <h5 onClick={toggleSelected}>{brand.title}</h5>
             <div className="brand-colors">
                 {brand.colors.map(color => (
-                    <span style={{backgroundColor: '#' +color, color: getContrastYIQ(color)}}>{color}</span>
+                    <Clipboard component="span" style={{backgroundColor: '#' +color, color: getContrastYIQ(color)}} data-clipboard-text={color} onSuccess={() => setCopiedBrand(color)}>
+                        {color}
+                    </Clipboard>
                 ))}
             </div>
         </div>
