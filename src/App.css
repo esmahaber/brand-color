@@ -138,8 +138,11 @@ nav li:hover{
   text-indent: 150%;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
 }
-
+.brand-colors span:hover{
+  cursor: pointer;
+}
 .copied{
   position: fixed;
   bottom: 40px;
@@ -150,8 +153,9 @@ nav li:hover{
   padding: 10px 25px;
   background-color: #000;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
+  opacity: 0.5;
   -webkit-animation-name: shake;
   animation-name: shake;
   -webkit-animation-duration: 1s;

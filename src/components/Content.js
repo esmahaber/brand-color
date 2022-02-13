@@ -12,8 +12,8 @@ function Content() {
         <main className="content">
             <Header/>
             <section className="brands">
-                {brands.map(item => (
-                     <Brand brand={item}/>
+                {brands.map((item, index) => (
+                     <Brand key={index} brand={item}/>
                 )
                 )}
             </section>

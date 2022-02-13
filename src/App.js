@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const brandsArray = [];
+  let brandsArray = [];
 
   Object.keys(Brands).map(key => {
       brandsArray.push(Brands[key])
@@ -17,13 +17,15 @@ function App() {
   const [brands, setBrands] = useState(brandsArray);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [copiedBrand, setCopiedBrand] = useState();
+  const [search, setSearch] = useState("");
 
   const data = {
     brands,
     selectedBrands,
     setSelectedBrands,
     copiedBrand,
-    setCopiedBrand
+    setCopiedBrand,
+    setSearch,
   }
 
   useEffect(()=>{
@@ -31,6 +33,10 @@ function App() {
       setCopiedBrand("");
     }, 5000);
   },[copiedBrand])
+
+  useEffect(() =>{
+    setBrands(brandsArray.filter(brand => brand.title.toLowerCase().includes(search.toLowerCase())));
+  }, [search])
 
   return (
     <>
