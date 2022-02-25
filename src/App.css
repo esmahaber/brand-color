@@ -164,6 +164,42 @@ nav li:hover{
   animation-fill-mode: both;
 }
 
+.downloads{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.downloads .selected-event{
+  color: #999;
+  border-right: #999 1px solid;
+  margin-right: 5px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.downloads .selected-event.active{
+  color: #000;
+}
+.downloads svg{
+  margin-left: 10px ;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.downloads svg path{ 
+  stroke: #999;
+}
+.downloads .selected-event.active svg path{ 
+  stroke: #000;
+}
+.downloads .selected-event a{
+ position: relative;
+}
+.downloads .selected-event select{
+  cursor: pointer;
+}
+
   @-webkit-keyframes shake {
   0%, 100% {
   -webkit-transform: translate3d(0, 0, 0);
