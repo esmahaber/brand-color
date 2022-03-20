@@ -3,8 +3,7 @@ import Sidebar from './components/Sidebar';
 import Content from './components/Content';
 import MainContext from './context/MainContext';
 import Brands from "./brands.json";
-import { useState } from 'react/cjs/react.development';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
